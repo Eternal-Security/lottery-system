@@ -26,6 +26,11 @@ function saveData() {
   fs.writeFileSync(dbFile, JSON.stringify(numbers, null, 2));
 }
 
+// Root route
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 // API Routes
 app.get('/api/numbers', (req, res) => {
   res.json(numbers);
