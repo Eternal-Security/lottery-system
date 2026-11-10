@@ -1,0 +1,4 @@
+node_modules/
+lottery-data.json
+*.log
+.env

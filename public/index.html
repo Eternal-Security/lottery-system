@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery Number Reservation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lottery Numbers</h1>
+        <p class="subtitle">View available and reserved numbers</p>
+        
+        <div class="legend">
+            <span class="legend-item"><span class="box available"></span> Available</span>
+            <span class="legend-item"><span class="box reserved"></span> Reserved</span>
+        </div>
+        
+        <div id="numbersGrid" class="numbers-grid"></div>
+        
+        <button onclick="refreshNumbers()" class="refresh-btn">Refresh</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

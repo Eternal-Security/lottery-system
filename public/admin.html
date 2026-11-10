@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Lottery Reservation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Panel</h1>
+        <p class="subtitle">Manage lottery number reservations</p>
+        
+        <div class="admin-layout">
+            <div class="grid-section">
+                <h2>Lottery Numbers Grid</h2>
+                <div class="legend">
+                    <span class="legend-item"><span class="box available"></span> Available</span>
+                    <span class="legend-item"><span class="box reserved"></span> Reserved</span>
+                </div>
+                <div id="numbersGrid" class="numbers-grid admin-grid"></div>
+                <button onclick="refreshNumbers()" class="refresh-btn">Refresh</button>
+                <a href="index.html" class="link-btn">View Public Page</a>
+            </div>
+            
+            <div class="list-section">
+                <h2>Reserved Numbers</h2>
+                <div id="reservedList" class="reserved-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modalTitle"></h2>
+            <div id="modalBody"></div>
+            <div class="modal-buttons">
+                <button onclick="closeModal()" class="btn-cancel">Cancel</button>
+                <button id="modalAction" class="btn-action"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
